@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RGB Color Picker</title>
+    <!-- Enlace a la hoja de estilos de Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Enlace a la hoja de estilos personalizada -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">RGB Color Picker</h1>
+        <div class="row mb-4">
+            <!-- Control deslizante y campo de texto para el color rojo -->
+            <div class="col-md-4 mb-3">
+                <label for="redRange">Rojo</label>
+                <input type="range" class="form-control-range" id="redRange" min="0" max="255" value="0">
+                <input type="number" class="form-control mt-2" id="redInput" min="0" max="255" value="0">
+            </div>
+            <!-- Control deslizante y campo de texto para el color verde -->
+            <div class="col-md-4 mb-3">
+                <label for="greenRange">Verde</label>
+                <input type="range" class="form-control-range" id="greenRange" min="0" max="255" value="0">
+                <input type="number" class="form-control mt-2" id="greenInput" min="0" max="255" value="0">
+            </div>
+            <!-- Control deslizante y campo de texto para el color azul -->
+            <div class="col-md-4 mb-3">
+                <label for="blueRange">Azul</label>
+                <input type="range" class="form-control-range" id="blueRange" min="0" max="255" value="0">
+                <input type="number" class="form-control mt-2" id="blueInput" min="0" max="255" value="0">
+            </div>
+        </div>
+        <div class="row mb-4">
+            <div class="col text-center">
+                <!-- Recuadro que muestra el color seleccionado -->
+                <div id="colorBox" class="border rounded" style="height: 150px; width: 100%; max-width: 400px; margin: 0 auto;"></div>
+                <!-- Texto que muestra el código hexadecimal del color -->
+                <p class="mt-2">Código Hexadecimal: <span id="hexCode" class="font-weight-bold">#000000</span></p>
+            </div>
+        </div>
+        <div class="row mb-4">
+            <div class="col text-center">
+                <!-- Input para seleccionar el color -->
+                <label for="colorPicker" class="font-weight-bold">Seleccionar Color</label>
+                <input type="color" class="form-control form-control-color" id="colorPicker" value="#000000" style="max-width: 120px;">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <!-- Campos de texto para ingresar los valores RGB en decimal -->
+                <h4 class="text-center mb-3">Ingresar valores RGB (decimal)</h4>
+                <form id="rgbForm" class="text-center">
+                    <div class="form-group d-inline-block mx-2">
+                        <label for="rInput">Rojo</label>
+                        <input type="number" class="form-control" id="rInput" min="0" max="255" value="0">
+                    </div>
+                    <div class="form-group d-inline-block mx-2">
+                        <label for="gInput">Verde</label>
+                        <input type="number" class="form-control" id="gInput" min="0" max="255" value="0">
+                    </div>
+                    <div class="form-group d-inline-block mx-2">
+                        <label for="bInput">Azul</label>
+                        <input type="number" class="form-control" id="bInput" min="0" max="255" value="0">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Enlace al archivo JavaScript personalizado -->
+    <script src="script.js"></script>
+</body>
+</html>
